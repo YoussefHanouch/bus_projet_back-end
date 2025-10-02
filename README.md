@@ -29,38 +29,9 @@ This project provides a complete solution for managing bus transportation servic
 🏗️ Project Structure
 Frontend (React.js)
 
-bus_projet_frontend/
-├── src/
-│   ├── components/
-│   │   ├── BusSearch.js          # Bus search functionality
-│   │   ├── CardLign.js           # Line cards display
-│   │   ├── cartBus.js            # Bus cart/booking
-│   │   ├── Footer.js             # Application footer
-│   │   ├── Header.js             # Application header
-│   │   ├── Inscription.js        # User registration
-│   │   ├── Locationmap.js        # Location mapping
-│   │   ├── Locmap.js             # Location map component
-│   │   ├── Login.js              # User authentication
-│   │   ├── Tarif.js              # Pricing information
-│   │   ├── WelcomeSection.js     # Welcome section
-│   │   ├── sectionicone.js       # Icon sections
-│   │   └── data.js               # Application data
-│   └── ...
-└── ...
-Backend (Laravel)
 
 
-bus_projet_backend/
-├── app/
-│   ├── Models/
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   └── Requests/
-│   └── ...
-├── database/
-│   ├── migrations/
-│   └── seeders/
-└── ...
+
 🎯 Core Features
 🔍 Bus Search & Discovery
 BusSearch.js - Advanced search functionality for bus routes
