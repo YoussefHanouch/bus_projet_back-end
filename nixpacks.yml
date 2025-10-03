@@ -1,0 +1,33 @@
+version: "v1beta6"
+
+providers:
+  php:
+    version: "8.3"
+
+build:
+  base:
+    image: ubuntu:22.04
+  
+  install:
+    - apt-get update
+    - apt-get install -y \
+        libpng-dev \
+        libjpeg-dev \
+        libfreetype6-dev \
+        libonig-dev \
+        libxml2-dev \
+        libzip-dev \
+        zip \
+        unzip
+    - docker-php-ext-configure gd --with-freetype --with-jpeg
+    - docker-php-ext-install pdo pdo_mysql mbstring xml gd zip
+
+  scripts:
+    build:
+      - composer install --optimize-autoloader --no-dev --prefer-dist
+      - php artisan config:cache
+      - php artisan route:cache
+      - php artisan view:cache
+
+start:
+  cmd: php artisan serve --host=0.0.0.0 --port=$PORT
